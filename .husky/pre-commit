@@ -1,3 +1,2 @@
 pnpm lint
 pnpm format
-pnpm commitlint -e $1
