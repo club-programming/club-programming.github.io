@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#13111C] text-white antialiased;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply rounded-lg bg-purple-500 px-8 py-3 font-semibold text-white shadow-lg shadow-purple-500/25 transition-all duration-300 hover:bg-purple-600 hover:shadow-purple-500/35;
+  }
+
+  .btn-secondary {
+    @apply rounded-lg border border-slate-700 px-8 py-3 font-semibold text-slate-300 transition-all duration-300 hover:border-purple-500/50 hover:text-white;
+  }
+}
+
+@layer utilities {
+  .bg-glow {
+    @apply before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-r before:from-purple-500/0 before:via-purple-500/10 before:to-purple-500/0 before:opacity-0 before:transition-opacity before:duration-500 hover:before:opacity-100;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
