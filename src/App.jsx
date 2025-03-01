@@ -32,7 +32,7 @@ function App() {
                 >
                   About
                 </Link>
-                {['会場', '登壇者', 'タイムスケジュール'].map((item) => (
+                {['Venue', 'Speakers', 'Schedule'].map((item) => (
                   <button
                     key={item}
                     className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
