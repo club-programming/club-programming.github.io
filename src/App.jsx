@@ -17,7 +17,7 @@ function App() {
                 to="/"
                 className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-3xl font-bold text-transparent"
               >
-                プログラミング部
+                Club Programming
               </Link>
               <div className="space-x-8">
                 <Link
