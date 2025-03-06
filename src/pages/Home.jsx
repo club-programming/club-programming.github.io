@@ -1,7 +1,10 @@
 import { SiX, SiFacebook, SiLine } from '@icons-pack/react-simple-icons';
 import { ClipboardCopy } from 'lucide-react';
+import { Routes, Route, Link } from 'react-router-dom';
 
 export default function Home() {
+  const text =
+    'LTとは、"Lightning Talk"の略で簡単に言うと短いプレゼンテーションです！\n短い時間なのでカジュアルに行うことができて、よく勉強会やイベントなどで行われます！相手に伝えたい内容を短い時間で伝えられるかが重要です！';
   const shareURL = new URL(
     window.location.origin + window.location.pathname
   ).toString();
@@ -68,7 +71,19 @@ export default function Home() {
             </div>
           ))}
         </div>
-
+        {/* lt紹介セクション */}
+        <div className="mt-24 flex flex-col items-center text-center">
+          <h1 className="bg-gradient-to-l from-violet-600 to-indigo-600 bg-clip-text text-5xl font-bold text-transparent">
+            OVERVIEW
+          </h1>
+          <h2 className="text-2x1 mt-1 pb-4 text-slate-400">大会概要</h2>
+          <div class="relative w-full max-w-3xl rounded-xl border border-slate-800 bg-slate-900/50 p-6">
+            <h3 class="mb-2 text-lg font-semibold text-white">LT大会とは</h3>
+            <p class="mb-4 block whitespace-pre-wrap text-sm font-light leading-normal text-slate-200">
+              {text}
+            </p>
+          </div>
+        </div>
         {/* シェアボタン */}
         <div className="mt-16 flex items-center justify-center gap-4">
           <button
