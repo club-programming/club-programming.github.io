@@ -81,7 +81,7 @@ export default function Home() {
             <div class="mx-1 mb-4 flex items-center border-b border-slate-200 pb-2">
               <h5 class="text-sm font-semibold text-white">LT大会とは</h5>
             </div>
-            <p class="mb-4 block whitespace-pre-wrap font-light leading-normal text-slate-200">
+            <p class="mb-4 block whitespace-pre-wrap text-sm font-light leading-normal text-slate-200">
               {text}
             </p>
           </div>
