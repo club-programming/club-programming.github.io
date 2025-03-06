@@ -4,7 +4,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 
 export default function Home() {
   const text =
-  'LTとは、"Lightning Talk"の略で簡単に言うと短いプレゼンテーションです！\n短い時間なのでカジュアルに行うことができて、よく勉強会やイベントなどで行われます！相手に伝えたい内容を短い時間で伝えられるかが重要です！';
+    'LTとは、"Lightning Talk"の略で簡単に言うと短いプレゼンテーションです！\n短い時間なのでカジュアルに行うことができて、よく勉強会やイベントなどで行われます！相手に伝えたい内容を短い時間で伝えられるかが重要です！';
   const shareURL = new URL(
     window.location.origin + window.location.pathname
   ).toString();
