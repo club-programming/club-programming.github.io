@@ -1,4 +1,17 @@
+import { SiX, SiFacebook, SiLine } from '@icons-pack/react-simple-icons';
+import { ClipboardCopy } from 'lucide-react';
+
 export default function Home() {
+  const shareURL = new URL(
+    window.location.origin + window.location.pathname
+  ).toString();
+
+  function handleCopyUrl() {
+    navigator.clipboard.writeText(shareURL).then(() => {
+      alert('URLをコピーしました');
+    });
+  }
+
   return (
     <div className="relative">
       {/* ヘッダーセクション */}
@@ -54,6 +67,56 @@ export default function Home() {
               <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-purple-500/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </div>
           ))}
+        </div>
+
+        {/* シェアボタン */}
+        <div className="mt-16 flex items-center justify-center gap-4">
+          <button
+            onClick={() =>
+              window.open(
+                `https://twitter.com/intent/tweet?text=${encodeURIComponent('サンプル')}&url=${encodeURIComponent(shareURL)}`,
+                '_blank'
+              )
+            }
+            className="inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2 text-white transition-all hover:opacity-90"
+          >
+            <SiX />
+            <span>シェア</span>
+          </button>
+
+          <button
+            onClick={() =>
+              window.open(
+                `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareURL)}`,
+                '_blank'
+              )
+            }
+            className="inline-flex items-center gap-2 rounded-lg bg-[#1877F2] px-4 py-2 text-white transition-all hover:opacity-90"
+          >
+            <SiFacebook />
+            <span>シェア</span>
+          </button>
+
+          <button
+            onClick={() =>
+              window.open(
+                `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareURL)}`,
+                '_blank'
+              )
+            }
+            className="inline-flex items-center gap-2 rounded-lg bg-[#00B900] px-4 py-2 text-white transition-all hover:opacity-90"
+          >
+            <SiLine />
+            <span>シェア</span>
+          </button>
+
+          <button
+            onClick={handleCopyUrl}
+            className="inline-flex items-center gap-2 rounded-lg bg-slate-700 px-4 py-2 text-white transition-all hover:opacity-90"
+          >
+            <ClipboardCopy />
+            <span>URLをコピー</span>
+          </button>
         </div>
       </main>
     </div>
