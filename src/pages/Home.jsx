@@ -1,7 +1,10 @@
 import { SiX, SiFacebook, SiLine } from '@icons-pack/react-simple-icons';
 import { ClipboardCopy } from 'lucide-react';
+import { Routes, Route, Link } from 'react-router-dom';
 
 export default function Home() {
+  const text =
+  'LTとは、"Lightning Talk"の略で簡単に言うと短いプレゼンテーションです！\n短い時間なのでカジュアルに行うことができて、よく勉強会やイベントなどで行われます！相手に伝えたい内容を短い時間で伝えられるかが重要です！';
   const shareURL = new URL(
     window.location.origin + window.location.pathname
   ).toString();
@@ -68,7 +71,71 @@ export default function Home() {
             </div>
           ))}
         </div>
-
+        {/* lt紹介セクション */}
+        <div className="mt-24 flex flex-col items-center text-center">
+          <h1 className="bg-gradient-to-l from-violet-600 to-indigo-600 bg-clip-text text-5xl font-bold text-transparent">
+            OVERVIEW
+          </h1>
+          <h2 className="text-2x1 mt-1 text-slate-400">大会概要</h2>
+          <div class="relative my-6 flex w-11/12 flex-col rounded-lg border border-slate-200 bg-slate-900/50 p-6 shadow-sm md:w-11/12 lg:w-2/3">
+            <div class="mx-1 mb-4 flex items-center border-b border-slate-200 px-1 pb-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-computer"
+              >
+                <rect width="14" height="8" x="5" y="2" rx="2" />
+                <rect width="20" height="8" x="2" y="14" rx="2" />
+                <path d="M6 18h2" />
+                <path d="M12 18h6" />
+              </svg>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+              />
+              <h5 class="ml-3 text-2xl text-sm font-semibold text-white">
+                LT大会とは
+              </h5>
+            </div>
+            <p class="mb-4 block whitespace-pre-wrap font-light leading-normal text-slate-200">
+              {text}
+            </p>
+            <div class="flex items-center justify-center">
+              <button class="group relative inline-flex h-[calc(48px+8px)] items-center justify-center rounded-lg bg-neutral-950 py-1 pl-6 pr-14 font-medium text-neutral-50">
+                <span class="z-10 pr-2">
+                  <Link to="/about">詳細はこちらから</Link>
+                </span>
+                <div class="absolute right-1 inline-flex h-12 w-12 items-center justify-end rounded-lg bg-neutral-700 transition-[width] group-hover:w-[calc(100%-8px)]">
+                  <div class="mr-3.5 flex items-center justify-center">
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-neutral-50"
+                    >
+                      <path
+                        d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
         {/* シェアボタン */}
         <div className="mt-16 flex items-center justify-center gap-4">
           <button
