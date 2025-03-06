@@ -76,8 +76,8 @@ export default function Home() {
           <h1 className="bg-gradient-to-l from-violet-600 to-indigo-600 bg-clip-text text-5xl font-bold text-transparent">
             OVERVIEW
           </h1>
-          <h2 className="text-2x1 mt-1 text-slate-400">大会概要</h2>
-          <div class="relative my-6 flex w-11/12 flex-col rounded-lg border border-slate-200 bg-slate-900/50 p-6 shadow-sm md:w-11/12 lg:w-2/3">
+          <h2 className="text-2x1 mt-1 pb-4 text-slate-400">大会概要</h2>
+          <div class="relative w-full max-w-3xl rounded-xl border border-slate-800 bg-slate-900/50 p-6">
             <div class="mx-1 mb-4 flex items-center border-b border-slate-200 px-1 pb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
