@@ -85,53 +85,57 @@ export default function Home() {
           </div>
         </div>
         {/* シェアボタン */}
-        <div className="mt-16 flex items-center justify-center gap-4">
-          <button
-            onClick={() =>
-              window.open(
-                `https://twitter.com/intent/tweet?text=${encodeURIComponent('サンプル')}&url=${encodeURIComponent(shareURL)}`,
-                '_blank'
-              )
-            }
-            className="inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2 text-white transition-all hover:opacity-90"
-          >
-            <SiX />
-            <span>シェア</span>
-          </button>
+        <div className="mt-24 flex flex-col items-center text-center">
+          <h1 className="bg-gradient-to-l from-violet-600 to-indigo-600 bg-clip-text text-5xl font-bold text-transparent">
+            SHARE
+          </h1>
+          <h2 className="text-2x1 mt-1 pb-4 text-slate-400">
+            イベントをシェアしよう！
+          </h2>
+          <div className="flex items-center justify-center gap-4">
+            <button
+              onClick={() =>
+                window.open(
+                  `https://twitter.com/intent/tweet?text=${encodeURIComponent('サンプル')}&url=${encodeURIComponent(shareURL)}`,
+                  '_blank'
+                )
+              }
+              className="group inline-flex h-12 w-12 items-center justify-center rounded-xl border border-slate-800 bg-slate-900/50 text-slate-400 transition-all duration-300 hover:border-purple-500/50 hover:text-white"
+            >
+              <SiX className="h-5 w-5" />
+            </button>
 
-          <button
-            onClick={() =>
-              window.open(
-                `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareURL)}`,
-                '_blank'
-              )
-            }
-            className="inline-flex items-center gap-2 rounded-lg bg-[#1877F2] px-4 py-2 text-white transition-all hover:opacity-90"
-          >
-            <SiFacebook />
-            <span>シェア</span>
-          </button>
+            <button
+              onClick={() =>
+                window.open(
+                  `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareURL)}`,
+                  '_blank'
+                )
+              }
+              className="group inline-flex h-12 w-12 items-center justify-center rounded-xl border border-slate-800 bg-slate-900/50 text-slate-400 transition-all duration-300 hover:border-purple-500/50 hover:text-white"
+            >
+              <SiFacebook className="h-5 w-5" />
+            </button>
 
-          <button
-            onClick={() =>
-              window.open(
-                `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareURL)}`,
-                '_blank'
-              )
-            }
-            className="inline-flex items-center gap-2 rounded-lg bg-[#00B900] px-4 py-2 text-white transition-all hover:opacity-90"
-          >
-            <SiLine />
-            <span>シェア</span>
-          </button>
+            <button
+              onClick={() =>
+                window.open(
+                  `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareURL)}`,
+                  '_blank'
+                )
+              }
+              className="group inline-flex h-12 w-12 items-center justify-center rounded-xl border border-slate-800 bg-slate-900/50 text-slate-400 transition-all duration-300 hover:border-purple-500/50 hover:text-white"
+            >
+              <SiLine className="h-5 w-5" />
+            </button>
 
-          <button
-            onClick={handleCopyUrl}
-            className="inline-flex items-center gap-2 rounded-lg bg-slate-700 px-4 py-2 text-white transition-all hover:opacity-90"
-          >
-            <ClipboardCopy />
-            <span>URLをコピー</span>
-          </button>
+            <button
+              onClick={handleCopyUrl}
+              className="group inline-flex h-12 w-12 items-center justify-center rounded-xl border border-slate-800 bg-slate-900/50 text-slate-400 transition-all duration-300 hover:border-purple-500/50 hover:text-white"
+            >
+              <ClipboardCopy className="h-5 w-5" />
+            </button>
+          </div>
         </div>
       </main>
     </div>
