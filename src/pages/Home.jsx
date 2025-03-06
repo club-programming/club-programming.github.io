@@ -78,9 +78,7 @@ export default function Home() {
           </h1>
           <h2 className="text-2x1 mt-1 pb-4 text-slate-400">大会概要</h2>
           <div class="relative w-full max-w-3xl rounded-xl border border-slate-800 bg-slate-900/50 p-6">
-            <div class="mx-1 mb-4 flex items-center border-b border-slate-200 pb-2">
-              <h5 class="text-sm font-semibold text-white">LT大会とは</h5>
-            </div>
+            <h3 class="mb-2 text-lg font-semibold text-white">LT大会とは</h3>
             <p class="mb-4 block whitespace-pre-wrap text-sm font-light leading-normal text-slate-200">
               {text}
             </p>
