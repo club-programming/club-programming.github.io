@@ -1,19 +1,32 @@
 import { useState, useEffect } from 'react';
 
 export default function Gacha() {
-  const [titles, setTitles] = useState([]);
+  const [templates, setTemplates] = useState([]);
   const [currentTitle, setCurrentTitle] = useState('');
 
   useEffect(() => {
     fetch('/lt_gacha.json')
       .then((response) => response.json())
-      .then((data) => setTitles(data));
+      .then((data) => setTemplates(data));
   }, []);
 
   function drawTitle() {
-    if (titles.length === 0) return;
-    const randomIndex = Math.floor(Math.random() * titles.length);
-    setCurrentTitle(titles[randomIndex].title);
+    if (templates.length === 0) return;
+
+    // Select the main title randomly
+    const randomTemplate =
+      templates[Math.floor(Math.random() * templates.length)];
+
+    // Select a sub-word randomly
+    const randomWord =
+      randomTemplate.words[
+        Math.floor(Math.random() * randomTemplate.words.length)
+      ];
+
+    // Embed the sub-word into the main title
+    const finalTitle = randomTemplate.main.replace('{{word}}', randomWord);
+
+    setCurrentTitle(finalTitle);
   }
 
   return (
