@@ -1,7 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-
+import Speakers from './pages/Speakers';
 function App() {
   return (
     <div className="min-h-screen bg-[#13111C] selection:bg-purple-500/90 selection:text-white">
@@ -32,7 +32,13 @@ function App() {
                 >
                   About
                 </Link>
-                {['Venue', 'Speakers', 'Schedule'].map((item) => (
+                <Link
+                  to="/speakers"
+                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
+                >
+                  Speakers
+                </Link>
+                {['Venue', 'Schedule'].map((item) => (
                   <button
                     key={item}
                     className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
@@ -48,6 +54,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/speakers" element={<Speakers />} />
         </Routes>
       </div>
     </div>
