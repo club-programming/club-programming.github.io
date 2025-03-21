@@ -1,7 +1,7 @@
 import first from '../assets/first.png';
-import second from '../assets/second.png';
 import third from '../assets/third.png';
 import fourth from '../assets/fourth.png';
+
 export default function Speakers() {
   return (
     <main className="container mx-auto px-4 py-20">
@@ -26,7 +26,6 @@ export default function Speakers() {
                 'こんにちは！哲学とか、絵を描くことが好きです！\nプログラミングはもっと好きです！',
               enthusiasm:
                 '聞いている人に期待感を持ってもらえるような、そんな発表がしたいです！\nよろしくお願いします！',
-              images: second,
             },
             {
               name: '依田隆之介',
@@ -49,11 +48,17 @@ export default function Speakers() {
           ].map((feature, i) => (
             <div key={i} class="p-7 lg:p-3">
               <div class="items-top gap-4 text-center lg:flex lg:text-left">
-                <img
-                  alt="team"
-                  class="mb-4 h-full flex-shrink-0 rounded-lg bg-white object-cover object-center lg:w-1/2"
-                  src={feature.images}
-                />
+                {feature.images ? (
+                  <img
+                    alt="team"
+                    class="mb-4 h-full flex-shrink-0 rounded-lg bg-white object-cover object-center lg:w-1/2"
+                    src={feature.images}
+                  />
+                ) : (
+                  <div class="flex h-auto w-full flex-shrink-0 items-center justify-center rounded-lg text-2xl font-medium text-white lg:w-1/2">
+                    Coming soon...
+                  </div>
+                )}
                 <div class="w-full whitespace-pre-wrap">
                   <h3 class="text-gray-300">{feature.overview}</h3>
                   <h2 className="mb-2 border-purple-500 text-2xl font-bold text-white lg:border-b-2">
