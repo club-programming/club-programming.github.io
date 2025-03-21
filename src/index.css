@@ -30,4 +30,7 @@
   .text-balance {
     text-wrap: balance;
   }
+  .speakers-bg-p :nth-child(2) div > img {
+    @apply p-4;
+  }
 }
