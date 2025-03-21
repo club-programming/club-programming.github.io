@@ -2,6 +2,8 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Speakers from './pages/Speakers';
+import Gacha from './pages/games/Gacha';
+
 function App() {
   return (
     <div className="min-h-screen bg-[#13111C] selection:bg-purple-500/90 selection:text-white">
@@ -55,6 +57,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/speakers" element={<Speakers />} />
+          <Route path="/games/gacha" element={<Gacha />} />
         </Routes>
       </div>
     </div>
