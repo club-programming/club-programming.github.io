@@ -3,8 +3,6 @@ import { ClipboardCopy } from 'lucide-react';
 import { Routes, Route, Link } from 'react-router-dom';
 
 export default function Home() {
-  const text =
-    'LTとは、"Lightning Talk"の略で簡単に言うと短いプレゼンテーションです！\n短い時間なのでカジュアルに行うことができて、よく勉強会やイベントなどで行われます！\n短い時間ぎゅっと詰め込まれた様々な作品たちの魅力を是非！お楽しみください！';
   const shareURL = new URL(
     window.location.origin + window.location.pathname
   ).toString();
@@ -78,9 +76,10 @@ export default function Home() {
           </h1>
           <h2 className="text-2x1 mt-1 pb-4 text-slate-400">大会概要</h2>
           <div class="relative w-full max-w-3xl rounded-xl border border-slate-800 bg-slate-900/50 p-6">
-            <h3 class="mb-2 text-lg font-semibold text-white">LT大会とは</h3>
-            <p class="mb-4 block whitespace-pre-wrap text-sm font-light leading-normal text-slate-200">
-              {text}
+            <p class="block whitespace-pre-wrap text-sm font-light leading-normal text-slate-200">
+              N高グループ生、N中等部生による、プログラミングで作られた成果物の発表会です！5分という短い
+              <br />
+              時間にぎゅっと詰め込まれた様々な作品たちの魅力を是非！お楽しみください！
             </p>
           </div>
         </div>
