@@ -1,6 +1,7 @@
-import first from '../assets/first.png';
-import third from '../assets/third.png';
-import fourth from '../assets/fourth.png';
+import IshiharaYoshiharu from '../assets/ishihara_yoshiharu.png';
+import TakahamaRyota from '../assets/takahama_ryota.png';
+import YodaRyunosuke from '../assets/yoda_ryunosuke.png';
+import Akatsukiyuito from '../assets/akatsuki_yuito.png';
 
 export default function Speakers() {
   return (
@@ -17,7 +18,7 @@ export default function Speakers() {
               overview: 'N高等学校8期生',
               introduction: 'Flutterが好きです',
               enthusiasm: '楽しみ、頑張る',
-              images: first,
+              images: IshiharaYoshiharu,
             },
             {
               name: '高浜遼太',
@@ -26,6 +27,7 @@ export default function Speakers() {
                 'こんにちは！哲学とか、絵を描くことが好きです！\nプログラミングはもっと好きです！',
               enthusiasm:
                 '聞いている人に期待感を持ってもらえるような、そんな発表がしたいです！\nよろしくお願いします！',
+              images: TakahamaRyota,
             },
             {
               name: '依田隆之介',
@@ -34,7 +36,7 @@ export default function Speakers() {
                 '依田隆之介です。好きな食べ物はたこ焼きで、普段はプログラミングをしています。',
               enthusiasm:
                 'LT大会で、色々な人に聞いていただけるように頑張ります！',
-              images: third,
+              images: YodaRyunosuke,
             },
             {
               name: 'あかつきゆいと',
@@ -43,7 +45,7 @@ export default function Speakers() {
                 '主にWebアプリケーションなどを開発しています。UniProjectというサークルの運営をしています。',
               enthusiasm:
                 'うまく話せるかはわかりませんが、精一杯プログラミングに興味を持っていただけるよう頑張ります！',
-              images: fourth,
+              images: Akatsukiyuito,
             },
           ].map((feature, i) => (
             <div key={i} class="p-7 lg:p-3">
