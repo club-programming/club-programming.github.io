@@ -12,6 +12,12 @@ const scheduleData = [
 const Schedule = () => {
   return (
     <div className="container relative mx-auto px-4 py-12">
+      <h1 className="mb-4 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+        Schedule
+      </h1>
+      <p className="mb-8 text-center text-lg text-slate-300">
+        ものづくり発表会は13:50~から始まります！
+      </p>
       <div className="overflow-x-auto">
         <table className="mx-auto w-full max-w-screen-md border-collapse overflow-hidden rounded-lg bg-[#1F1B41]/50">
           <thead className="bg-[#17154B]">
