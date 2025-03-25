@@ -1,22 +1,12 @@
 import React from 'react';
 
 const scheduleData = [
-  { time: '13:50', duration: '1:00', content: 'ゲスト着席' },
-  { time: '13:51', duration: '4:00', content: 'MC挨拶・ゲスト紹介・挨拶' },
-  { time: '13:55', duration: '1:00', content: '発表開始（入場）' },
-  { time: '13:56', duration: '5:00', content: '一番目 発表開始' },
-  { time: '14:01', duration: '2:00', content: '一番目 FB' },
-  { time: '14:03', duration: '1:00', content: '発表者退場 / 入場' },
-  { time: '14:04', duration: '5:00', content: '二番目 発表開始' },
-  { time: '14:09', duration: '2:00', content: '二番目 FB' },
-  { time: '14:11', duration: '1:00', content: '発表者退場 / 入場' },
-  { time: '14:12', duration: '5:00', content: '三番目 発表開始' },
-  { time: '14:17', duration: '2:00', content: '三番目 FB' },
-  { time: '14:19', duration: '1:00', content: '発表者退場 / 入場' },
-  { time: '14:20', duration: '5:00', content: '四番目 発表開始' },
-  { time: '14:25', duration: '2:00', content: '四番目 FB' },
-  { time: '14:27', duration: '1:00', content: '発表者退場 / 入場' },
-  { time: '14:28', duration: '2:00', content: '終わりの挨拶' },
+  { time: '13:50 ~ 13:55', content: 'ゲスト着席・MC挨拶' },
+  { time: '13:56 ~ 14:01', content: '一人目' },
+  { time: '14:04 ~ 14:09', content: '二人目' },
+  { time: '14:12 ~ 14:17', content: '三人目' },
+  { time: '14:20 ~ 14:25', content: '四人目' },
+  { time: '14:28 ~ 14:30', content: 'LT大会' },
 ];
 
 const Schedule = () => {
@@ -30,9 +20,6 @@ const Schedule = () => {
                 Time
               </th>
               <th className="px-6 py-4 text-left text-sm font-semibold text-white">
-                Lap
-              </th>
-              <th className="px-6 py-4 text-left text-sm font-semibold text-white">
                 Content
               </th>
             </tr>
@@ -44,7 +31,6 @@ const Schedule = () => {
                 className="border-b border-[#2D2B3B] transition-colors hover:bg-[#17154B]/50"
               >
                 <td className="px-6 py-4 text-slate-300">{item.time}</td>
-                <td className="px-6 py-4 text-slate-300">{item.duration}</td>
                 <td className="px-6 py-4 text-slate-300">{item.content}</td>
               </tr>
             ))}
