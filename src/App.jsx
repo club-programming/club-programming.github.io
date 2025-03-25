@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Speakers from './pages/Speakers';
+import Schedule from './pages/Schedule';
 import Gacha from './pages/games/Gacha';
 
 function App() {
@@ -40,14 +41,15 @@ function App() {
                 >
                   Speakers
                 </Link>
-                {['Access', 'Schedule'].map((item) => (
-                  <button
-                    key={item}
-                    className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
-                  >
-                    {item}
-                  </button>
-                ))}
+                <button className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white">
+                  Access
+                </button>
+                <Link
+                  to="/schedule"
+                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
+                >
+                  Schedule
+                </Link>
               </div>
             </div>
           </nav>
@@ -58,6 +60,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/games/gacha" element={<Gacha />} />
+          <Route path="/schedule" element={<Schedule />} />
         </Routes>
       </div>
     </div>
