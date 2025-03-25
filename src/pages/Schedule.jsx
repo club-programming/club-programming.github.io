@@ -16,7 +16,7 @@ const scheduleData = [
   { time: '14:20', duration: '5:00', content: '四番目 発表開始' },
   { time: '14:25', duration: '2:00', content: '四番目 FB' },
   { time: '14:27', duration: '1:00', content: '発表者退場 / 入場' },
-  { time: '14:28', duration: '2:00', content: 'LT大会' },
+  { time: '14:28', duration: '2:00', content: '終わりの挨拶' },
 ];
 
 const Schedule = () => {
