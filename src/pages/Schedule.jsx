@@ -1,12 +1,12 @@
 import React from 'react';
 
 const scheduleData = [
-  { time: '13:50 ~ 13:55', content: 'ゲスト着席・MC挨拶' },
-  { time: '13:56 ~ 14:01', content: '一人目' },
-  { time: '14:04 ~ 14:09', content: '二人目' },
-  { time: '14:12 ~ 14:17', content: '三人目' },
-  { time: '14:20 ~ 14:25', content: '四人目' },
-  { time: '14:28 ~ 14:30', content: 'LT大会' },
+  { time: '13:50 ~ 13:55', content: '開会・挨拶' },
+  { time: '13:56 ~ 14:01', content: '発表 一人目' },
+  { time: '14:04 ~ 14:09', content: '発表 二人目' },
+  { time: '14:12 ~ 14:17', content: '発表 三人目' },
+  { time: '14:20 ~ 14:25', content: '発表 四人目' },
+  { time: '14:28 ~ 14:30', content: '閉会' },
 ];
 
 const Schedule = () => {
