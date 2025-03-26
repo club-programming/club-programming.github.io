@@ -4,6 +4,7 @@ import About from './pages/About';
 import Speakers from './pages/Speakers';
 import Schedule from './pages/Schedule';
 import Gacha from './pages/games/Gacha';
+import Access from './pages/Access';
 
 function App() {
   return (
@@ -41,9 +42,12 @@ function App() {
                 >
                   Speakers
                 </Link>
-                <button className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white">
+                <Link
+                  to="/access"
+                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
+                >
                   Access
-                </button>
+                </Link>
                 <Link
                   to="/schedule"
                   className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
@@ -61,6 +65,7 @@ function App() {
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/games/gacha" element={<Gacha />} />
           <Route path="/schedule" element={<Schedule />} />
+          <Route path="/access" element={<Access />} />
         </Routes>
       </div>
     </div>
