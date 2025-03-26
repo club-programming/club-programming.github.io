@@ -24,36 +24,21 @@ function App() {
                 Club Programming
               </Link>
               <div className="space-x-8">
-                <Link
-                  to="/"
-                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
-                >
-                  Home
-                </Link>
-                <Link
-                  to="/about"
-                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
-                >
-                  About
-                </Link>
-                <Link
-                  to="/speakers"
-                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
-                >
-                  Speakers
-                </Link>
-                <Link
-                  to="/access"
-                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
-                >
-                  Access
-                </Link>
-                <Link
-                  to="/schedule"
-                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
-                >
-                  Schedule
-                </Link>
+                {[
+                  { to: '/', label: 'Home' },
+                  { to: '/about', label: 'About' },
+                  { to: '/speakers', label: 'Speakers' },
+                  { to: '/access', label: 'Access' },
+                  { to: '/schedule', label: 'Schedule' },
+                ].map((link) => (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </nav>
