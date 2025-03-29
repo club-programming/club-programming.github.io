@@ -4,6 +4,7 @@ import About from './pages/About';
 import Speakers from './pages/Speakers';
 import Schedule from './pages/Schedule';
 import Gacha from './pages/games/Gacha';
+import Access from './pages/Access';
 
 function App() {
   return (
@@ -23,33 +24,21 @@ function App() {
                 Club Programming
               </Link>
               <div className="space-x-8">
-                <Link
-                  to="/"
-                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
-                >
-                  Home
-                </Link>
-                <Link
-                  to="/about"
-                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
-                >
-                  About
-                </Link>
-                <Link
-                  to="/speakers"
-                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
-                >
-                  Speakers
-                </Link>
-                <button className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white">
-                  Access
-                </button>
-                <Link
-                  to="/schedule"
-                  className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
-                >
-                  Schedule
-                </Link>
+                {[
+                  { to: '/', label: 'Home' },
+                  { to: '/about', label: 'About' },
+                  { to: '/speakers', label: 'Speakers' },
+                  { to: '/access', label: 'Access' },
+                  { to: '/schedule', label: 'Schedule' },
+                ].map((link) => (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </nav>
@@ -61,6 +50,7 @@ function App() {
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/games/gacha" element={<Gacha />} />
           <Route path="/schedule" element={<Schedule />} />
+          <Route path="/access" element={<Access />} />
         </Routes>
       </div>
     </div>
