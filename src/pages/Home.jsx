@@ -37,19 +37,54 @@ export default function Home() {
         <div className="mt-24 grid grid-cols-1 gap-8 md:grid-cols-3">
           {[
             {
-              title: 'サンプル１',
-              description:
-                'サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル',
+              title: '部活動の様子',
+              description: (
+                <p className="text-sm leading-6 text-slate-400">
+                  プログラミング部の普段の様子は{' '}
+                  <a
+                    href="https://sites.google.com/nnn.ac.jp/computer/home"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-purple-500 decoration-2 transition-colors duration-300 hover:text-purple-500"
+                  >
+                    こちら
+                  </a>
+                  （学内向け）
+                </p>
+              ),
             },
             {
-              title: 'サンプル２',
-              description:
-                'サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル',
+              title: 'ものづくり発表会',
+              description: (
+                <p className="text-sm leading-6 text-slate-400">
+                  今年のものづくり発表会のオンライン会場は
+                  <a
+                    href="https://www.nnn.ed.nico/courses/168/chapters/2226/lessons/482532975"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-purple-500 decoration-2 transition-colors duration-300 hover:text-purple-500"
+                  >
+                    こちら
+                  </a>
+                </p>
+              ),
             },
             {
-              title: 'サンプル３',
-              description:
-                'サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル',
+              title: 'アーカイブ',
+              description: (
+                <p className="text-sm leading-6 text-slate-400">
+                  去年のアーカイブは{' '}
+                  <a
+                    href="https://www.nnn.ed.nico/courses/168/chapters/2226/lessons/482532975"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-purple-500 decoration-2 transition-colors duration-300 hover:text-purple-500"
+                  >
+                    こちらから
+                  </a>
+                  （学内向け）
+                </p>
+              ),
             },
           ].map((feature, i) => (
             <div
@@ -62,9 +97,7 @@ export default function Home() {
               <h3 className="mb-2 text-lg font-semibold text-white">
                 {feature.title}
               </h3>
-              <p className="text-sm leading-6 text-slate-400">
-                {feature.description}
-              </p>
+              {feature.description}
               <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-purple-500/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </div>
           ))}
