@@ -20,9 +20,11 @@ export default function Home() {
         {/* ヒーローセクション */}
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-clip-text text-5xl font-bold tracking-tight text-transparent">
-            LT大会
+            ものづくり発表会
           </h2>
-          <p className="mt-6 text-lg leading-8 text-slate-400">LTの説明</p>
+          <p className="mt-6 text-lg leading-8 text-slate-400">
+            〜Create to change〜
+          </p>
           <div className="mt-10 flex items-center justify-center gap-6">
             <button className="rounded-lg bg-purple-500 px-8 py-3 font-semibold text-white shadow-lg shadow-purple-500/25 transition-all duration-300 hover:bg-purple-600 hover:shadow-purple-500/35">
               詳細を見る
