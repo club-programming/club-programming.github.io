@@ -1,6 +1,5 @@
 import { SiX, SiFacebook, SiLine } from '@icons-pack/react-simple-icons';
 import { ClipboardCopy } from 'lucide-react';
-import { Routes, Route, Link } from 'react-router-dom';
 
 export default function Home() {
   const shareURL = new URL(
