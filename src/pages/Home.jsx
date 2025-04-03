@@ -41,16 +41,18 @@ export default function Home() {
               title: '部活動の様子',
               description: (
                 <p className="text-sm leading-6 text-slate-400">
-                  プログラミング部の普段の様子は{' '}
-                  <a
-                    href="https://sites.google.com/nnn.ac.jp/computer/home"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-purple-500 decoration-2 transition-colors duration-300 hover:text-purple-500"
+                  プログラミング部の普段の様子
+                  <button
+                    onClick={() =>
+                      window.open(
+                        'https://sites.google.com/nnn.ac.jp/computer/home',
+                        '_blank'
+                      )
+                    }
+                    className="mt-2 block w-full rounded-lg bg-purple-500 px-4 py-2 text-white transition-all duration-300 hover:bg-purple-600"
                   >
-                    こちら
-                  </a>
-                  （学内向け）
+                    閲覧する（学内向け）
+                  </button>
                 </p>
               ),
             },
@@ -58,15 +60,18 @@ export default function Home() {
               title: 'ものづくり発表会',
               description: (
                 <p className="text-sm leading-6 text-slate-400">
-                  今年のものづくり発表会のオンライン会場は
-                  <a
-                    href="https://www.nnn.ed.nico/courses/168/chapters/2226/lessons/482532975"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-purple-500 decoration-2 transition-colors duration-300 hover:text-purple-500"
+                  今年のものづくり発表会のオンライン会場
+                  <button
+                    onClick={() =>
+                      window.open(
+                        'https://www.nnn.ed.nico/courses/168/chapters/2226/lessons/482532975',
+                        '_blank'
+                      )
+                    }
+                    className="mt-2 block w-full rounded-lg bg-purple-500 px-4 py-2 text-white transition-all duration-300 hover:bg-purple-600"
                   >
-                    こちら
-                  </a>
+                    閲覧する
+                  </button>
                 </p>
               ),
             },
@@ -74,16 +79,18 @@ export default function Home() {
               title: 'アーカイブ',
               description: (
                 <p className="text-sm leading-6 text-slate-400">
-                  去年のアーカイブは{' '}
-                  <a
-                    href="https://www.nnn.ed.nico/courses/168/chapters/2226/lessons/482532975"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-purple-500 decoration-2 transition-colors duration-300 hover:text-purple-500"
+                  去年のアーカイブ
+                  <button
+                    onClick={() =>
+                      window.open(
+                        'https://www.nnn.ed.nico/courses/168/chapters/2226/lessons/482532975',
+                        '_blank'
+                      )
+                    }
+                    className="mt-2 block w-full rounded-lg bg-purple-500 px-4 py-2 text-white transition-all duration-300 hover:bg-purple-600"
                   >
-                    こちらから
-                  </a>
-                  （学内向け）
+                    閲覧する（学内向け）
+                  </button>
                 </p>
               ),
             },
