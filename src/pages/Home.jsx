@@ -64,7 +64,7 @@ export default function Home() {
                   <button
                     onClick={() =>
                       window.open(
-                        'https://www.nnn.ed.nico/courses/168/chapters/2226/lessons/482532975',
+                        'https://nnn.ed.jp/school_festival/plan/',
                         '_blank'
                       )
                     }
@@ -83,7 +83,7 @@ export default function Home() {
                   <button
                     onClick={() =>
                       window.open(
-                        'https://nnn.ed.jp/school_festival/plan/',
+                        'https://www.nnn.ed.nico/courses/168/chapters/2226/lessons/482532975',
                         '_blank'
                       )
                     }
