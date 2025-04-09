@@ -8,11 +8,13 @@ import { ReactNode } from 'react';
 interface Feature {
   title: string;
   description: ReactNode;
+  icon: ReactNode;
 }
 
 const features: Feature[] = [
   {
     title: '部活動の様子',
+    icon: <Code className="h-6 w-6" />,
     description: (
       <p className="text-sm leading-6 text-slate-400">
         プログラミング部の普段の様子
@@ -32,6 +34,7 @@ const features: Feature[] = [
   },
   {
     title: 'ものづくり発表会',
+    icon: <Presentation className="h-6 w-6" />,
     description: (
       <p className="text-sm leading-6 text-slate-400">
         今年のものづくり発表会のオンライン会場
@@ -48,6 +51,7 @@ const features: Feature[] = [
   },
   {
     title: 'アーカイブ',
+    icon: <Archive className="h-6 w-6" />,
     description: (
       <p className="text-sm leading-6 text-slate-400">
         去年のアーカイブ
@@ -110,13 +114,7 @@ export default function Home() {
               className="group relative rounded-xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-purple-500/50"
             >
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10 text-purple-500">
-                {i === 0 ? (
-                  <Code className="h-6 w-6" />
-                ) : i === 1 ? (
-                  <Presentation className="h-6 w-6" />
-                ) : (
-                  <Archive className="h-6 w-6" />
-                )}
+                {feature.icon}
               </div>
               <h3 className="mb-2 text-lg font-semibold text-white">
                 {feature.title}
