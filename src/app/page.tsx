@@ -1,7 +1,7 @@
 'use client';
 
 import { SiX, SiFacebook, SiLine } from '@icons-pack/react-simple-icons';
-import { ClipboardCopy } from 'lucide-react';
+import { ClipboardCopy, Code, Presentation, Archive } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 export default function Home() {
@@ -105,7 +105,13 @@ export default function Home() {
               className="group relative rounded-xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-purple-500/50"
             >
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10 text-purple-500">
-                <div className="h-6 w-6" />
+                {i === 0 ? (
+                  <Code className="h-6 w-6" />
+                ) : i === 1 ? (
+                  <Presentation className="h-6 w-6" />
+                ) : (
+                  <Archive className="h-6 w-6" />
+                )}
               </div>
               <h3 className="mb-2 text-lg font-semibold text-white">
                 {feature.title}
