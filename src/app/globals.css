@@ -31,4 +31,21 @@
   .speakers-bg-p :nth-child(2) div > img {
     @apply p-4;
   }
+
+  /* Mobile Menu Animation */
+  .menu-line {
+    @apply h-0.5 w-6 bg-white transform transition-all duration-300;
+  }
+
+  .menu-line-1 {
+    @apply origin-center;
+  }
+
+  .menu-line-2 {
+    @apply origin-center;
+  }
+
+  .menu-line-3 {
+    @apply origin-center;
+  }
 }
