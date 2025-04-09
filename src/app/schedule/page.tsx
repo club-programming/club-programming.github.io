@@ -1,5 +1,3 @@
-import React from 'react';
-
 const scheduleData = [
   { time: '13:50 ~ 13:55', content: '開会・挨拶' },
   { time: '13:56 ~ 14:01', content: '発表 一人目' },
@@ -9,7 +7,7 @@ const scheduleData = [
   { time: '14:28 ~ 14:30', content: '閉会' },
 ];
 
-const Schedule = () => {
+export default function Schedule() {
   return (
     <div className="container relative mx-auto px-4 py-12">
       <h1 className="mb-4 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
@@ -45,6 +43,4 @@ const Schedule = () => {
       </div>
     </div>
   );
-};
-
-export default Schedule;
+}
