@@ -56,7 +56,7 @@ export default function Speakers() {
                   <Image
                     alt="Speaker"
                     className="mb-4 h-full flex-shrink-0 rounded-lg bg-white object-cover object-center lg:w-1/2"
-                    src={feature.images.src}
+                    src={feature.images}
                   />
                 ) : (
                   <div className="flex h-auto w-full flex-shrink-0 items-center justify-center rounded-lg text-2xl font-medium text-white lg:w-1/2">
