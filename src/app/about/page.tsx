@@ -1,5 +1,15 @@
-export default function About() {
-  const eventDetails = [
+interface EventDetail {
+  label: string;
+  value: string;
+}
+
+interface ParticipantGroup {
+  category: string;
+  members: string[];
+}
+
+export default function About(): React.ReactElement {
+  const eventDetails: EventDetail[] = [
     { label: 'タイトル', value: 'ものづくり発表会〜Create to change〜' },
     {
       label: '企画概要',
@@ -10,7 +20,7 @@ export default function About() {
     { label: 'スタジオ', value: '磁石祭ステージ' },
   ];
 
-  const participants = [
+  const participants: ParticipantGroup[] = [
     {
       category: 'ゲスト',
       members: ['吉村 総一郎さん', '小川 慧さん'],

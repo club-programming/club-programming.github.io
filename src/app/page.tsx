@@ -1,10 +1,15 @@
+'use client';
+
 import { SiX, SiFacebook, SiLine } from '@icons-pack/react-simple-icons';
 import { ClipboardCopy } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 export default function Home() {
-  const shareURL = new URL(
-    window.location.origin + window.location.pathname
-  ).toString();
+  const pathname = usePathname();
+  const shareURL =
+    typeof window !== 'undefined'
+      ? new URL(pathname, window.location.origin).toString()
+      : '';
 
   function handleCopyUrl() {
     navigator.clipboard.writeText(shareURL).then(() => {
@@ -14,9 +19,9 @@ export default function Home() {
 
   return (
     <div className="relative">
-      {/* ヘッダーセクション */}
+      {/* Header Section */}
       <main className="container mx-auto px-4 py-20">
-        {/* ヒーローセクション */}
+        {/* Hero Section */}
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-clip-text text-5xl font-bold tracking-tight text-transparent">
             ものづくり発表会
@@ -34,7 +39,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* フィーチャーセクション */}
+        {/* Features Section */}
         <div className="mt-24 grid grid-cols-1 gap-8 md:grid-cols-3">
           {[
             {
@@ -116,8 +121,8 @@ export default function Home() {
             OVERVIEW
           </h1>
           <h2 className="text-2x1 mt-1 pb-4 text-slate-400">大会概要</h2>
-          <div class="relative w-full max-w-3xl rounded-xl border border-slate-800 bg-slate-900/50 p-6">
-            <p class="block whitespace-pre-wrap text-sm font-light leading-normal text-slate-200">
+          <div className="relative w-full max-w-3xl rounded-xl border border-slate-800 bg-slate-900/50 p-6">
+            <p className="block whitespace-pre-wrap text-sm font-light leading-normal text-slate-200">
               N高グループ生、N中等部生による、プログラミングで作られた成果物の発表会です！5分という短い
               <br />
               時間にぎゅっと詰め込まれた様々な作品たちの魅力を是非！お楽しみください！
@@ -136,7 +141,9 @@ export default function Home() {
             <button
               onClick={() =>
                 window.open(
-                  `https://twitter.com/intent/tweet?text=${encodeURIComponent('サンプル')}&url=${encodeURIComponent(shareURL)}`,
+                  `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                    'サンプル'
+                  )}&url=${encodeURIComponent(shareURL)}`,
                   '_blank'
                 )
               }
@@ -148,7 +155,9 @@ export default function Home() {
             <button
               onClick={() =>
                 window.open(
-                  `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareURL)}`,
+                  `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                    shareURL
+                  )}`,
                   '_blank'
                 )
               }
@@ -160,7 +169,9 @@ export default function Home() {
             <button
               onClick={() =>
                 window.open(
-                  `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareURL)}`,
+                  `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(
+                    shareURL
+                  )}`,
                   '_blank'
                 )
               }

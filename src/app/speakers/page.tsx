@@ -1,7 +1,9 @@
-import IshiharaYoshiharu from '../assets/ishihara_yoshiharu.png';
-import TakahamaRyota from '../assets/takahama_ryota.png';
-import YodaRyunosuke from '../assets/yoda_ryunosuke.png';
-import Akatsukiyuito from '../assets/akatsuki_yuito.png';
+import IshiharaYoshiharu from '../../assets/ishihara_yoshiharu.png';
+import TakahamaRyota from '../../assets/takahama_ryota.png';
+import YodaRyunosuke from '../../assets/yoda_ryunosuke.png';
+import Akatsukiyuito from '../../assets/akatsuki_yuito.png';
+
+import Image from 'next/image';
 
 export default function Speakers() {
   return (
@@ -48,25 +50,25 @@ export default function Speakers() {
               images: Akatsukiyuito,
             },
           ].map((feature, i) => (
-            <div key={i} class="p-7 lg:p-3">
-              <div class="items-top gap-4 text-center lg:flex lg:text-left">
+            <div key={i} className="p-7 lg:p-3">
+              <div className="items-top gap-4 text-center lg:flex lg:text-left">
                 {feature.images ? (
-                  <img
-                    alt="team"
-                    class="mb-4 h-full flex-shrink-0 rounded-lg bg-white object-cover object-center lg:w-1/2"
-                    src={feature.images}
+                  <Image
+                    alt="Speaker"
+                    className="mb-4 h-full flex-shrink-0 rounded-lg bg-white object-cover object-center lg:w-1/2"
+                    src={feature.images.src}
                   />
                 ) : (
-                  <div class="flex h-auto w-full flex-shrink-0 items-center justify-center rounded-lg text-2xl font-medium text-white lg:w-1/2">
+                  <div className="flex h-auto w-full flex-shrink-0 items-center justify-center rounded-lg text-2xl font-medium text-white lg:w-1/2">
                     Coming soon...
                   </div>
                 )}
-                <div class="w-full whitespace-pre-wrap">
-                  <h3 class="text-gray-300">{feature.overview}</h3>
+                <div className="w-full whitespace-pre-wrap">
+                  <h3 className="text-gray-300">{feature.overview}</h3>
                   <h2 className="mb-2 border-purple-500 text-2xl font-bold text-white lg:border-b-2">
                     {feature.name}
                   </h2>
-                  <ul class="mb-3">
+                  <ul className="mb-3">
                     <li>
                       <h4 className="text-white-900 text-lg font-medium">
                         自己紹介
