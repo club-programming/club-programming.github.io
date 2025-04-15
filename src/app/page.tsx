@@ -41,7 +41,7 @@ const features: Feature[] = [
         今年のものづくり発表会のオンライン会場
         <button
           onClick={() =>
-            window.open('https://nnn.ed.jp/school_festival/plan/', '_blank')
+            window.open('https://nnn.ed.jp/school_festival/plan/#ex-83vv-rm3nx5i', '_blank')
           }
           className="mt-2 block w-full rounded-lg bg-purple-500 px-4 py-2 text-white transition-all duration-300 hover:bg-purple-600"
         >
