@@ -41,7 +41,7 @@ export default function Speakers() {
               images: YodaRyunosuke,
             },
             {
-              name: 'あかつきゆいと',
+              name: '谷豊',
               overview: 'S高等学校4期生',
               introduction:
                 '主にWebアプリケーションなどを開発しています。UniProjectというサークルの運営をしています。',
