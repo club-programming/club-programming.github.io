@@ -5,6 +5,7 @@ import { ClipboardCopy, Code, Presentation, Archive } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
 import { Countdown } from '@/components/Countdown';
+import Link from 'next/link';
 
 interface Feature {
   title: string;
@@ -40,7 +41,7 @@ const features: Feature[] = [
       <p className="text-sm leading-6 text-slate-400">
         今年のものづくり発表会のオンライン会場
         <p className="mt-2 block w-full rounded-lg bg-purple-500 px-4 py-2 text-center text-white transition-all duration-300 hover:bg-purple-600">
-          coming soon...  
+          coming soon...
         </p>
       </p>
     ),
@@ -93,9 +94,12 @@ export default function Home() {
             〜Create to change〜
           </p>
           <div className="mt-10 flex items-center justify-center gap-6">
-            <button className="rounded-lg bg-purple-500 px-8 py-3 font-semibold text-white shadow-lg shadow-purple-500/25 transition-all duration-300 hover:bg-purple-600 hover:shadow-purple-500/35">
+            <Link
+              href="/about"
+              className="rounded-lg bg-purple-500 px-8 py-3 font-semibold text-white shadow-lg shadow-purple-500/25 transition-all duration-300 hover:bg-purple-600 hover:shadow-purple-500/35"
+            >
               詳細を見る
-            </button>
+            </Link>
           </div>
 
           {/* Countdown Timer */}
