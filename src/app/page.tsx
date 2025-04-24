@@ -7,69 +7,49 @@ import { ReactNode } from 'react';
 import { Countdown } from '@/components/Countdown';
 import Link from 'next/link';
 
+interface ButtonLink {
+  text: string;
+  url: string;
+  internal?: boolean;
+}
+
 interface Feature {
   title: string;
-  description: ReactNode;
   icon: ReactNode;
+  description: string;
+  button: ButtonLink;
 }
 
 const features: Feature[] = [
   {
     title: '部活動の様子',
     icon: <Code className="h-6 w-6" />,
-    description: (
-      <p className="text-sm leading-6 text-slate-400">
-        プログラミング部の普段の様子
-        <button
-          onClick={() =>
-            window.open(
-              'https://sites.google.com/nnn.ac.jp/computer/home',
-              '_blank'
-            )
-          }
-          className="mt-2 block w-full rounded-lg bg-purple-500 px-4 py-2 text-white transition-all duration-300 hover:bg-purple-600"
-        >
-          閲覧する（学内向け）
-        </button>
-      </p>
-    ),
+    description: 'プログラミング部の普段の様子',
+    button: {
+      text: '閲覧する（学内向け）',
+      url: 'https://sites.google.com/nnn.ac.jp/computer/home',
+      internal: false,
+    },
   },
   {
     title: 'ものづくり発表会',
     icon: <Presentation className="h-6 w-6" />,
-    description: (
-      <p className="text-sm leading-6 text-slate-400">
-        今年のものづくり発表会のオンライン会場
-        <button
-          onClick={() =>
-            window.open('https://live.nicovideo.jp/watch/lv347362272', '_blank')
-          }
-          className="mt-2 block w-full rounded-lg bg-purple-500 px-4 py-2 text-white transition-all duration-300 hover:bg-purple-600"
-        >
-          閲覧する
-        </button>
-      </p>
-    ),
+    description: '今年のものづくり発表会のオンライン会場',
+    button: {
+      text: '閲覧する',
+      url: 'https://live.nicovideo.jp/watch/lv347362272',
+      internal: false,
+    },
   },
   {
     title: 'アーカイブ',
     icon: <Archive className="h-6 w-6" />,
-    description: (
-      <p className="text-sm leading-6 text-slate-400">
-        去年のアーカイブ
-        <button
-          onClick={() =>
-            window.open(
-              'https://www.nnn.ed.nico/courses/168/chapters/2226/lessons/482532975',
-              '_blank'
-            )
-          }
-          className="mt-2 block w-full rounded-lg bg-purple-500 px-4 py-2 text-white transition-all duration-300 hover:bg-purple-600"
-        >
-          閲覧する（学内向け）
-        </button>
-      </p>
-    ),
+    description: '去年のアーカイブ',
+    button: {
+      text: '閲覧する（学内向け）',
+      url: 'https://www.nnn.ed.nico/courses/168/chapters/2226/lessons/482532975',
+      internal: false,
+    },
   },
 ];
 
@@ -129,12 +109,21 @@ export default function Home() {
               <h3 className="mb-2 text-lg font-semibold text-white">
                 {feature.title}
               </h3>
-              {feature.description}
+              <p className="text-sm leading-6 text-slate-400">
+                {feature.description}
+              </p>
+              <button
+                onClick={() => window.open(feature.button.url, '_blank')}
+                className="mt-2 block w-full rounded-lg bg-purple-500 px-4 py-2 text-white transition-all duration-300 hover:bg-purple-600"
+              >
+                {feature.button.text}
+              </button>
               <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-purple-500/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </div>
           ))}
         </div>
-        {/* lt紹介セクション */}
+
+        {/* Overview Section */}
         <div className="mt-24 flex flex-col items-center text-center">
           <h1 className="bg-gradient-to-l from-violet-600 to-indigo-600 bg-clip-text text-5xl font-bold text-transparent">
             OVERVIEW
@@ -148,7 +137,8 @@ export default function Home() {
             </p>
           </div>
         </div>
-        {/* シェアボタン */}
+
+        {/* Share Section */}
         <div className="mt-24 flex flex-col items-center text-center">
           <h1 className="bg-gradient-to-l from-violet-600 to-indigo-600 bg-clip-text text-5xl font-bold text-transparent">
             SHARE
