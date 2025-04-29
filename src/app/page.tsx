@@ -4,7 +4,6 @@ import { SiX, SiFacebook, SiLine } from '@icons-pack/react-simple-icons';
 import { ClipboardCopy, Code, Presentation, Archive } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
-import { Countdown } from '@/components/Countdown';
 import Link from 'next/link';
 
 interface ButtonLink {
@@ -88,12 +87,7 @@ export default function Home() {
           </div>
 
           {/* Countdown Timer */}
-          <div className="mt-16">
-            <h3 className="mb-8 text-2xl font-semibold text-slate-200">
-              発表会まで
-            </h3>
-            <Countdown />
-          </div>
+          <div className="mt-16"></div>
         </div>
 
         {/* Features Section */}
