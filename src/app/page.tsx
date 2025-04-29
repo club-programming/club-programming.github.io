@@ -145,7 +145,7 @@ export default function Home() {
               onClick={() =>
                 window.open(
                   `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                    'サンプル'
+                    '磁石祭ZERO ステージ企画「ものづくり発表会 〜Create to change〜」\n'
                   )}&url=${encodeURIComponent(shareURL)}`,
                   '_blank'
                 )
